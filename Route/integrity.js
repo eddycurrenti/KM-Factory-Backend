@@ -2,7 +2,7 @@ const express = require("express");
 const route = express.Router();
 const mongoose = require("mongoose");
 
-route.get("/health", async (req, res) => {
+route.get("c", async (req, res) => {
   try {
     const dbState = mongoose.connection.readyState;
 

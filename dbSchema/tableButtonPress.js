@@ -1,5 +1,5 @@
 // models/ProductionEvent.js
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const productionEventSchema = new mongoose.Schema(
   {
@@ -30,4 +30,6 @@ const productionEventSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("ProductionEvent", productionEventSchema);
+const jana = mongoose.model("ProductionEvent", productionEventSchema);
+
+module.exports = jana;

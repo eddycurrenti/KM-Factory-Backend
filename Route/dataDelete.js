@@ -5,6 +5,7 @@ const shiftTable = require("../dbSchema/shiftTableMetrics");
 const table = require("../dbSchema/table");
 const Line = require("../dbSchema/line");
 const ProductionEvent = require("../dbSchema/tableButtonPress");
+
 //delete by shift
 route.delete("/shift/:shiftId", async (req, res) => {
   try {
@@ -24,7 +25,6 @@ route.delete("/shift/:shiftId", async (req, res) => {
     return res.status(500).json({ message: e});
   }
 });
-
 
 //delete complete system
 route.delete("/system/full-reset", async (req, res) => {

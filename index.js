@@ -4,9 +4,17 @@ const http = require("http");
 const { Server } = require("socket.io");
 
 const app = express();
+const server = http.createServer(app);
 const dotenv = require("dotenv");
 dotenv.config();
 const connectDB = require("./dbSchema/dbConnect.js");
+
+const LineConfig = require("./Route/configureLine.js");
+const deleteData = require("./Route/dataDelete.js");
+const getData = require("./Route/getData.js");
+const healthCheck = require("./Route/integrity.js");
+const shift = require("./Route/shift.js");
+
 const port = process.env.PORT || 3000;
 app.use(express.json());
 
@@ -22,6 +30,12 @@ const io = new Server(server, {
 });
 
 app.set("io", io);
+
+app.use("/config", LineConfig);
+app.use("/admin" , deleteData);
+app.use("/health", healthCheck);
+app.use("/fetch", getData);
+app.use("/shiftInfo",shift);
 
 server.listen(port , ()=>{
     console.log(`Server is running on ${port}`);

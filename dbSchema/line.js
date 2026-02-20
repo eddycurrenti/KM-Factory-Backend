@@ -16,4 +16,4 @@ const lineSchema = new mongoose.Schema({
 
 const alpha = mongoose.model("line",lineSchema);
 
-model.export = alpha;
+module.exports = alpha;

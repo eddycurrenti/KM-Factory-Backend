@@ -1,10 +1,19 @@
 {
+  "name": "kh-backend",
+  "version": "1.0.0",
+  "description": "KH Factory Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "mongoose": "^9.2.1",
-    "node": "^25.6.1",
-    "nodemon": "^3.1.11",
     "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
