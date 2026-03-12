@@ -2,6 +2,10 @@ KM Factory Production Monitoring System
 
 Node.js • MongoDB • React • MQTT • ESP32 • Raspberry Pi • Socket.io
 
+writeUp : 
+
+https://drive.google.com/file/d/1-T8GL-K-_aqgKs3YXEi8WDvVW10mNiTT/view?usp=sharing
+
 A real-time production monitoring system for a leather factory that tracks output across multiple production lines and work tables.
 The system integrates IoT devices, edge computing, and a web dashboard to provide live visibility into factory operations.
 
